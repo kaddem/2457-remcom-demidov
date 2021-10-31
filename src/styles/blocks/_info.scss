@@ -1,0 +1,23 @@
+.info {
+  padding: 140px 0;
+  background-color: rgba($color-light, .2);
+}
+
+.info-inner {
+  @include container;
+}
+
+.info-wrap {
+  display: flex;
+}
+
+.info-content {
+  flex-basis: 50%;
+  padding-right: $indent-half-gap;
+}
+
+.info-media {
+  flex-basis: 50%;
+  padding-left: $indent-half-gap;
+  border: 1px solid #000;
+}
