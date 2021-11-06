@@ -1,0 +1,78 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$indent-half-gap;
+  margin-right: -$indent-half-gap;
+}
+
+.form-field {
+  flex-basis: 100%;
+  margin-top: 30px;
+  padding: 0 $indent-half-gap;
+  border: 1px solid #000;
+}
+
+.form-field-half {
+  flex-basis: 50%;
+}
+
+.form-label {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 27px;
+  color: $color-accent;
+}
+
+.form-label-checkbox {
+  display: flex;
+  font-size: 20px;
+  line-height: 27px;
+
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 11px;
+    border-radius: 6px;
+    box-sizing: inherit;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2px $color-accent;
+  }
+
+  a {
+    color: $color-accent;
+  }
+}
+
+.form-checkbox {
+  display: none;
+
+  &:checked + .form-label-checkbox {
+    &:before {
+      background-image: url('../images/icon-check.svg');
+    }
+  }
+
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 27px;
+  background-color: $color-light;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-textarea {
+  height: 170px;
+  resize: vertical;
+}
