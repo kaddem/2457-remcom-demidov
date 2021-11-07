@@ -1,27 +1,55 @@
 .main-nav {
-  margin-left: auto;
+  @media (max-width: $df-tablet) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: $color-dark;
+    border-top: 1px solid $color-light;
+  }
+
+  @media (max-width: $df-mobile) {
+    padding-bottom: 30px;
+  }
 
   ul {
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (max-width: $df-tablet) {
+      padding: 10px 0;
+      justify-content: center;
+    }
+
+    @media (max-width: $df-mobile) {
+      display: block;
+      text-align: center;
+    }
   }
 
   li {
     margin-left: 30px;
 
+    @media (max-width: $df-mobile) {
+      margin-left: 0;
+    }
+
     &:first-child {
       margin-left: 0;
     }
+
+    a {
+      display: block;
+      padding: 10px 0;
+      font-size: 24px;
+      line-height: 33px;
+      color: $color-light;
+      text-decoration: none;
+    }
   }
 
-  a {
-    display: block;
-    padding: 10px 0;
-    font-size: 24px;
-    line-height: 33px;
-    color: $color-light;
-    text-decoration: none;
-  }
+
 }

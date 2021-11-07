@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
   padding: 25px 0;
   background-color: $color-dark;
 }
@@ -13,6 +18,7 @@
 }
 
 .logo {
+  margin-right: auto;
   font-family: $font-ral;
   font-weight: 300;
   font-size: 42px;
@@ -27,6 +33,32 @@
   line-height: 33px;
   color: $color-light;
   text-decoration: none;
+
+  @media (max-width: $df-tablet) {
+    margin-left: 10px;
+  }
+
+  @media (max-width: $df-mobile) {
+    display: none;
+  }
 }
 
+.phone-mobile {
+  display: none;
+
+  @media (max-width: $df-mobile) {
+    display: block;
+    padding-top: 30px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.burger {
+  display: none;
+
+  @media (max-width: $df-tablet) {
+    display: block;
+  }
+}
 

@@ -1,5 +1,5 @@
 .info {
-  padding: 140px 0;
+  padding: 240px 0 140px 0;
   background-color: rgba($color-light, .2);
 }
 
@@ -16,8 +16,29 @@
   padding-right: $indent-half-gap;
 }
 
+.info-title {
+  margin-top: 0;
+  font-size: 116px;
+  line-height: 136px;
+}
+
 .info-media {
   flex-basis: 50%;
   padding-left: $indent-half-gap;
-  border: 1px solid #000;
+}
+
+.info-photo-wrap {
+  position: relative;
+}
+
+.info-desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba($color-dark, .5);
 }
