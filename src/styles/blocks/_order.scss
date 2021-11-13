@@ -15,4 +15,8 @@
 .order-form {
   width: 66.66%;
   margin: 0 auto;
+
+  @media (max-width: $df-tablet) {
+    width: 100%;
+  }
 }

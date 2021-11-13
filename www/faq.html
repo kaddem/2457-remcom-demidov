@@ -20,10 +20,8 @@
             <li><a href="contacts.html">Контакты</a></li>
             <li><a href="portfolio.html">Наши работы</a></li>
           </ul>
-          <a href="tel:+78128888888" class="phone phone-mobile">+7 812 888-88-88</a>
         </nav>
         <a href="tel:+78128888888" class="phone">+7 812 888-88-88</a>
-        <button class="burger">menu</button>
       </div>
     </div>
   </header>
@@ -31,32 +29,46 @@
   <main>
 
 
+    <section class="order">
+      <div class="order-inner">
+        <h2 class="order-title">Заявка на ремонт</h2>
 
+        <div class="order-form">
+          <form action="#" class="form">
+            <div class="form-field form-field-half">
+              <label for="name" class="form-label">Имя</label>
+              <input id="name" name="name" type="text" class="form-input">
+            </div>
+            <div class="form-field form-field-half">
+              <label for="phone" class="form-label">Телефон</label>
+              <input id="phone" name="phone" type="tel" class="form-input">
+            </div>
+            <div class="form-field">
+              <label for="message" class="form-label">Что ремонтируем?</label>
+              <textarea id="message" name="message" class="form-textarea"></textarea>
+            </div>
+            <div class="form-field">
+              <input id="confirm" name="confirm" type="checkbox" class="form-checkbox">
+              <label for="confirm" class="form-label-checkbox">
+                <span>
+                  Даю согласие преподавателю на все на все на всена все на все на все на все
+                  <a href="#">
+                    в соответствии с моей доброй волей
+                  </a>
+                </span>
+              </label>
+            </div>
+            <div class="form-field">
+              <button type="send" class="btn btn-form">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-wrap">
-        <p class="copyright">Ничего не защищено</p>
-        <ul class="social">
-          <li class="social-item">
-            <a href="#" class="social-link" style="background-image: url('images/icon-insta.svg');">
-              <span class="social-text">Профиль в Instagramm</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link" style="background-image: url('images/icon-fb.svg');">
-              <span class="social-text">Профиль в facebook</span>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link" style="background-image: url('images/icon-telega.svg');">
-              <span class="social-text">Профиль в telegramm</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </footer>
 
   <script src="scripts/script.js"></script>

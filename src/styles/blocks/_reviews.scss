@@ -1,0 +1,32 @@
+.reviews {
+  padding: 240px 0 130px 0;
+  background-color: rgba($color-light, .2);
+}
+
+.reviews-inner {
+  @include container;
+}
+
+.reviews-title {
+  @include title-h2;
+}
+
+.reviews-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  margin-left: -($indent-half-gap);
+  margin-right: -($indent-half-gap);
+}
+
+.reviews-item {
+  flex-basis: 50%;
+  padding-left: $indent-half-gap;
+  padding-right: $indent-half-gap;
+  margin-bottom: 70px;
+}
+
+.reviews-btn {
+  margin-top: 30px;
+  text-align: center;
+}

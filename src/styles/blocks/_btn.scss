@@ -16,3 +16,17 @@
 .btn-form {
   width: 100%;
 }
+
+.btn-mobile {
+  display: none;
+
+  @media (max-width: $df-mobile) {
+    display: inline-block;
+  }
+}
+
+.btn-tablet {
+  @media (max-width: $df-mobile) {
+    display: none;
+  }
+}

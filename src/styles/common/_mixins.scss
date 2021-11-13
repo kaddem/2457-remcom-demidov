@@ -2,7 +2,7 @@
   max-width: $width + $indent-gap;
   padding: 0 $indent-half-gap;
   margin: 0 auto;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 
 @mixin title-h2 {
