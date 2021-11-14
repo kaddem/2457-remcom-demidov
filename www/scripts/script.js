@@ -1,137 +1,61 @@
 $(document).ready(function () {
 
-  console.log('script is working now!');
 
-  let petName = 'Vinni';
+  // let isOpen = false;
 
-  console.log(petName);
+  $('.burger').on('click', function () {
 
-  petName = 'Gans';
+    $('.main-nav').slideToggle();
 
-  console.log(petName);
+    // if (isOpen) {
+    //   $('.main-nav').hide();
+    //   isOpen = false;
+    //   return;
+    // }
 
-  const Pi = 3.14;
+    // $('.main-nav').show();
+    // isOpen = true;
 
-  console.log(Pi);
-
-
-
-  let petsArray = ['Тигр', 'Сова', 'Свинья', 'Медведь', 'Осел']; // 5 4
-
-  console.log(petsArray);
-  console.log(petsArray.length);
+  });
 
 
+  // Табы в контактах
+  $('.contacts-tab-link').on('click', function (e) {
+    e.preventDefault();
 
-  console.log('Ivan' + ' ' + 'Ivanovich');
+    let index = $(this).index('.contacts-tab-link');
 
-  console.log(9 - '5');
+    $('.contacts-tab-link').removeClass('active');
+    $(this).addClass('active');
 
-  let a = 1;
+    $('.contacts-content').removeClass('active');
+    $('.contacts-content').eq(index).addClass('active');
+  });
 
-  console.log(a); // 1
-  // a = a + 1;
-  a++;
-  console.log(a); // 2
-  a--;
-  console.log(a); // 1
+  // Фильтр в портфолио
+  $('.filter-link').on('click', function (e) {
+    e.preventDefault();
 
+    let linkType = $(this).data('type');
 
-  let age = 14;
+    $('.filter-link').removeClass('active');
+    $(this).addClass('active');
 
-  if (age >= 18) {
-    console.log('Можно продать алкоголь');
-  } else {
-    console.log('Платим штраф и закрываем магазин...');
-  }
-
-
-  let name;
-
-  console.log(name);
-
-  let someArray = [];
-
-  console.log(someArray.length);
-
-  if (someArray.length) {
-    console.log('Здравствуйте, ' + name);
-  } else {
-    console.log('Здравствуйте, товарищ!');
-  }
-
-
-
-  // for (let i = 0; i < petsArray.length; i++) {
-
-  //   hello(petsArray[i]);
-
-  // }
-
-
-  function hello(subjectArray) {
-
-    if (subjectArray) {
-      for (let i = 0; i < subjectArray.length; i++) {
-        console.log('hello, ' + subjectArray[i] + '!');
-      }
-
+    if (linkType === 'all') {
+      $('.portfolio-item').show();
       return;
     }
 
-    console.log('Печалька, никто не пришел((');
-  }
+    $('.portfolio-item').each(function () {
+      let portfolioType = $(this).data('type');
 
-  hello(petsArray);
-  hello();
+      if (linkType === portfolioType) {
+        $(this).show();
+        return;
+      }
 
-  let helloSome = function () {
-    console.log('hello some!');
-  }
-
-  helloSome();
-
-  let pet = {
-    name: 'Gans',
-    age: {
-
-    },
-    color: 'black',
-    meow: function () {
-      console.log('i\'m ' + this.name + '! meeeooowwwww');
-    },
-    actions: {
-      meow: function () { },
-      run: function () { },
-      sleep: function () { }
-    }
-  }
-
-  console.log(pet.name);
-  console.log(pet.age);
-
-  pet.meow();
-
-
-  // let serviceNodeArray = document.querySelectorAll('.services-item');
-
-  // serviceNodeArray.forEach(function (itemNode) {
-  //   itemNode.style.color = 'red';
-  // });
-
-
-  $('.services-item').css({ 'color': 'red' });
-
-
-  function summ(a, b) {
-    console.log('before');
-    return a + b;
-    console.log('after');
-  }
-
-  let someSumm = summ(3, 7);
-  console.log(someSumm);
-
-
+      $(this).hide();
+    });
+  });
 
 });
