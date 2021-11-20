@@ -1,7 +1,6 @@
 .portfolio {
   padding-top: 240px;
   padding-bottom: 130px;
-  background-color: rgba($color-light, .2);
 }
 
 .portfolio-inner {
@@ -22,20 +21,4 @@
 .portfolio-item {
   flex-basis: 33.33%;
   padding: $indent-half-gap;
-}
-
-.portfolio-card {
-  padding: 30px;
-  border-radius: 5px;
-  border: 1px solid rgba($color-accent, .1);
-  background-color: #fff;
-}
-
-.portfolio-heading {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-.portfolio-desc {
-  margin-bottom: 0;
 }
