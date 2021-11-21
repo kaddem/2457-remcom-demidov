@@ -1,20 +1,8 @@
 $(document).ready(function () {
 
-
-  // let isOpen = false;
-
   $('.burger').on('click', function () {
     $(this).toggleClass('open');
     $('.main-nav').slideToggle();
-
-    // if (isOpen) {
-    //   $('.main-nav').hide();
-    //   isOpen = false;
-    //   return;
-    // }
-
-    // $('.main-nav').show();
-    // isOpen = true;
   });
 
 
@@ -76,5 +64,57 @@ $(document).ready(function () {
     $('.faq-button').eq(prevIndex).removeClass('open');
     prevIndex = currentIndex;
   });
+
+
+  // Слайдер
+  if ($('.carousel').length) {
+    $('.carousel').slick({
+      autoplay: false,
+      dots: true
+    });
+  }
+
+  // Ajax подгрузка отзывов
+  $('.js-review-btn').on('click', function () {
+
+    $.ajax({
+      type: 'POST',
+      url: '../json/reviews.json',
+      data: 'count=2',
+      success: function (resData) {
+        let html = generateHtml(resData.reviews);
+        addToPage(html);
+      },
+      error: function () {
+        console.log('Ошибочка');
+      }
+    });
+
+  });
+
+
+  function generateHtml(dataArray) {
+    let htmlString = '';
+
+    dataArray.forEach(function (itemArray) {
+      htmlString = htmlString + `<div class="reviews-item">
+        <div class="review">
+          <div class="review-ava">
+            <img src="${itemArray.imageUrl}" alt="${itemArray.imageAlt}" class="review-pic">
+          </div>
+          <div class="review-content">
+            <span class="review-name">${itemArray.name}</span>
+            <blockquote class="review-quote">“${itemArray.reviewText}”</blockquote>
+          </div>
+        </div>
+      </div>`;
+    });
+
+    return htmlString;
+  }
+
+  function addToPage(htmlString) {
+    $('.reviews-list').append(htmlString);
+  }
 
 });

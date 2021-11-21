@@ -1,6 +1,7 @@
 .contacts {
   padding-top: 240px;
   padding-bottom: 130px;
+  background-color: rgba($color-light, .2);
 }
 
 .contacts-inner {
@@ -30,7 +31,7 @@
   color: $color-dark;
 
   &.active {
-    text-decoration: underline;
+    color: $color-accent;
   }
 }
 
@@ -39,6 +40,7 @@
 
   &.active {
     display: flex;
+    margin-top: 30px;
   }
 }
 

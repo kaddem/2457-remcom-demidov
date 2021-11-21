@@ -1,6 +1,7 @@
 .faq {
   padding-top: 240px;
   padding-bottom: 130px;
+  background-color: rgba($color-light, .2);
 }
 
 .faq-inner {
@@ -27,8 +28,9 @@
 }
 
 .faq-button {
+  position: relative;
   width: 100%;
-  padding: 30px;
+  padding: 30px 70px 30px 30px;
   text-align: left;
   font-family: $font-ral;
   font-weight: 300;
@@ -38,6 +40,41 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
+
+  &.open {
+    .faq-button-icon:before {
+      transform: scale(0);
+    }
+  }
+}
+
+.faq-button-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    margin: auto;
+    background-color: $color-accent;
+    transition: all .3s;
+  }
+
+  &:after {
+    transform: rotate(90deg);
+  }
 }
 
 .faq-content {

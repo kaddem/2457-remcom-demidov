@@ -4,6 +4,22 @@
   background-color: rgba($color-light, .2);
 }
 
+.order-separate {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1278px;
+    height: 1px;
+    margin: auto;
+    background-color: rgba($color-dark, .2);
+  }
+}
+
 .order-inner {
   @include container;
 }

@@ -69,7 +69,9 @@
 
       &.active:after,
       &:hover:after {
-        transform: scaleX(1);
+        @media (min-width: $desktop) {
+          transform: scaleX(1);
+        }
       }
     }
   }

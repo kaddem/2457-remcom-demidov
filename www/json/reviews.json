@@ -1,0 +1,16 @@
+{   
+    "isShowMore": true,
+    "reviews": [
+        {
+            "imageUrl": "images/ava-inna.png",
+            "imageAlt": "Портрет Инны",
+            "name": "Иванна",
+            "reviewText": "Все офигеноно"
+        }, {
+            "imageUrl": "images/ava-valdemar.png",
+            "imageAlt": "Портрет Октавиа",
+            "name": "Цезарь",
+            "reviewText": "Греки сдались! Круто!"
+        }
+    ]
+}
